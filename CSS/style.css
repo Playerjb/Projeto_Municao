@@ -1,0 +1,25 @@
+#corpo, section{
+    background-color: #00A647;
+}
+#nave {
+    background-color: #003E00;
+}
+#group {
+    width: 110px;
+}
+
+#salvar, #insert {
+    background-color: #003E00;
+}
+
+.table-responsive {
+    width: 90%;
+}
+
+#baixar:hover {
+    width: 41px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+}
+

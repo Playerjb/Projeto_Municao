@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiro, Porrada e Bomba</title>
+    <link href="CSS/style.css" rel="stylesheet" type="text/css"></link>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body id="corpo">
+    <!--Header-->
+    <header id="header">
+        <nav class="navbar navbar-dark mb-12" id="nave">
+            <div class="container-fluid">
+                <a onclick="save()" class="position-absolute" data-toggle="tooltip" data-placement="right" title="Baixar Arquivo"><img id="baixar"src="images/save.png" alt="" width="40" height="34" class="bi bi-file-earmark-arrow-down"></a>
+                <a class="navbar-brand mx-auto justify-content-center" href="#">
+                    <img src="images/logo1.png" alt="" width="40" height="34" class="d-sm-inline-block d-none align-text-top">
+                    <b class="mb-12">TIRO, PORRADA E BOMBA</b>
+                    <img src="images/logo2.png" alt="" width="40" height="34" class="d-sm-inline-block d-none align-text-top">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <!--Section-->
+    <section id="section" class="mb-5">
+        <div id="register" class="mt-5 w-75 mx-auto">
+            <form class="row justify-content-center">
+                <div class="col-md-4 col-ms-6">
+                    <label for="name" class="form-label">Nome *</label>
+                    <input type="text" class="form-control" id="name" value="Mark" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="surname" class="form-label">Sobrenome</label>
+                    <input type="text" class="form-control" id="surname" value="Otto" required>
+                </div>
+                <div class="col-md-8 col-ms-12 mt-5">
+                    <input class="btn btn-success" type="button" id="salvar" onclick="inserir()" value="Inserir">
+                </div>
+            </form>
+        </div>
+        <div id="values" class="table-responsive px-8 mt-5 mx-auto">
+            <h1 class="text-light">Valores</h1>
+            <table id="table" class="table border text-light">
+                <thead>
+                    <tr>
+                        <th scope="col">.22</th>
+                        <th scope="col">.40</th>
+                        <th scope="col">.556</th>
+                        <th scope="col">.12</th>
+                        <th scope="col">.9</th>
+                        <th scope="col">.380</th>
+                        <th scope="col">.38</th>
+                        <th scope="col">.357</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="col">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">R$</span>
+                                <input type="text" id="v22" class='form-control' value="1">
+                            </div>
+                        </td>
+                        <td scope="col">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">R$</span>
+                                <input type="text" id="v40" class='form-control' value="6">
+                            </div>
+                        </td>
+                        <td scope="col">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">R$</span>
+                                <input type="text" id="v556" class='form-control' value="10">
+                            </div>
+                        </td>
+                        <td scope="col">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">R$</span>
+                                <input type="text" id="v12" class='form-control' value="6">
+                            </div>
+                        </td>
+                        <td scope="col">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">R$</span>
+                                <input type="text" id="v9" class='form-control' value="5">
+                            </div>
+                        </td>
+                        <td scope="col">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">R$</span>
+                                <input type="text" id="v380" class='form-control' value="4">
+                            </div>
+                        </td>
+                        <td scope="col">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">R$</span>
+                                <input type="text" id="v38" class='form-control' value="5">
+                            </div>
+                        </td>
+                        <td scope="col">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">R$</span>
+                                <input type="text" id="v357" class='form-control' value="7">
+                            </div>
+                        </td> 
+                    </tr>
+                </tbody>
+            </table>
+            <input class="btn btn-success" type="button" id="salvar" onclick="save()" value="Salvar">
+        </div>
+        <div id="shots" class="table-responsive px-8 mt-5 mx-auto">
+            <h1 class="text-light">Munições</h1>
+            <table id="table" class="table border text-light">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="2">Nome</th>
+                        <th scope="col">.22</th>
+                        <th scope="col">.40</th>
+                        <th scope="col">.556</th>
+                        <th scope="col">.12</th>
+                        <th scope="col">.9</th>
+                        <th scope="col">.380</th>
+                        <th scope="col">.38</th>
+                        <th scope="col">.357</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="tBody">
+                    
+                </tbody>
+            </table>
+            
+        </div>
+        
+        <div id="hits" class="table-responsive w-75 px-8 mt-5 mx-auto">
+            <h1 class="text-light">Acertos</h1>
+            <table class="table border text-light">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="2">Nome</th>
+                        <th scope="col">2 pts</th>
+                        <th scope="col">3 pts</th>
+                        <th scope="col">4 pts</th>
+                        <th scope="col">5 pts</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="tBodyHits">
+                    
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+    <!--Footer-->
+    <footer id="footer" class="mb-5">
+
+    </footer>
+    <!--JavaScript-->
+    <Script src="JS/script.js"></Script>
+    <script src="JS/FileSaver.js"></script>
+</body>
+</html>
